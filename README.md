@@ -1,6 +1,6 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React ChatBot for XIIth CBSE students 
+![Alt](https://raw.githubusercontent.com/aseemchopra25/external-files/main/chatbot.gif)
+> Created a weather app using openweathermap API, ReactJS, React-Hooks and Custom CSS
 
 ## Available Scripts
 
