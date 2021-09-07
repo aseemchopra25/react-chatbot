@@ -1,37 +1,71 @@
-// this defines methods which are called when the message is parsed and an action or reply
-// is needed
-
 class ActionProvider {
     constructor (createChatBotMessage, setStateFunc, createClientMessage) {
         this.createChatBotMessage = createChatBotMessage;
         this.setState = setStateFunc;
         this.createClientMessage = createClientMessage;
     }
+    //Begin widget calls for individual lists
 
-    handleCBSEList = () => {
+    handlePhysicsList = () => {
         const message = this.createChatBotMessage(
-            "Fantastic, I've got the following resources for you on CBSE:",
+            "Fantastic, I've got the following resources for you on Physics:",
             {
-                widget: "cbseLinks"
+                widget: "physicsLinks"
             }
         );
         this.updateChatBotState(message);
     };
-    handleFashionList = () => {
+    handleChemistryList = () => {
         const message = this.createChatBotMessage(
-            "Fantastic, I've got the following resources for you on Fashion Design:",
+            "Fantastic, I've got the following resources for you on Chemistry:",
             {
-                widget: "fashionLinks"
+                widget: "chemistryLinks"
             }
         );
         this.updateChatBotState(message);
     };
+    handleMathematicsList = () => {
+        const message = this.createChatBotMessage(
+            "Fantastic, I've got the following resources for you on Chemistry:",
+            {
+                widget: "mathematicsLinks"
+            }
+        );
+        this.updateChatBotState(message);
+    };
+    handleEnglishList = () => {
+        const message = this.createChatBotMessage(
+            "Fantastic, I've got the following resources for you on English:",
+            {
+                widget: "englishLinks"
+            }
+        );
+        this.updateChatBotState(message);
+    };
+    handleEconomicsList = () => {
+        const message = this.createChatBotMessage(
+            "Fantastic, I've got the following resources for you on English:",
+            {
+                widget: "economicsLinks"
+            }
+        );
+        this.updateChatBotState(message);
+    };
+
+
+
+
+    //greeting actions 
     greet(){
-        const greetingMessage = this.createChatBotMessage("Hi, Nandini/Manya!")
+        const greetingMessage = this.createChatBotMessage("Hi Buddy, Enter a XIIth CBSE Subject!",
+        {
+            widget: "learningOptions",
+        }
+        )
         this.updateChatBotState(greetingMessage)
     }
     updateChatBotState(message){
-        // important to preserve the previous state
+        // important to preserve the previous state 
 
         this.setState(prevState => ({
             ...prevState, messages: [...prevState.messages, message]

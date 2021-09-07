@@ -15,18 +15,27 @@ class MessageParser {
         // console.log(message)
         const lowerCaseMessage = message.toLowerCase()
         
-        if(lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hi")){
+        if(lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hi") || lowerCaseMessage.includes("sup") || lowerCaseMessage.includes("what's up") || lowerCaseMessage.includes("yo") || lowerCaseMessage.includes("hey") ){
             // we haven't created greet method yet, so let's create it
             // in action provider file
             this.actionProvider.greet()
         }
-        if(lowerCaseMessage.includes("fashion design")){
-            this.actionProvider.handleFashionList()
+        if(lowerCaseMessage.includes("english") || lowerCaseMessage.includes("eng")){
+            this.actionProvider.handleEnglishList()
         }
-        if(lowerCaseMessage.includes("cbse")){
-            this.actionProvider.handleCBSEList()
+        if(lowerCaseMessage.includes("physics") || lowerCaseMessage.includes("phy")){
+            this.actionProvider.handlePhysicsList()
         }
-
+        if(lowerCaseMessage.includes("chemistry") || lowerCaseMessage.includes("chem")){
+            this.actionProvider.handleChemistryList()
+        }
+        if(lowerCaseMessage.includes("mathematics") || lowerCaseMessage.includes("math") || lowerCaseMessage.includes("maths")){
+            this.actionProvider.handleMathematicsList()
+        }
+        if(lowerCaseMessage.includes("economics") || lowerCaseMessage.includes("eco")){
+            this.actionProvider.handleEconomicsList()
+        }
+        
     }
 }
 

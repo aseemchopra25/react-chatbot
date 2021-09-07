@@ -5,17 +5,32 @@ import "./LearningOptions.css";
 const LearningOptions = (props) => {
     const options = [
         {
-            text: "CBSE", 
-            handler:props.actionProvider.handleCBSEList, 
+            text: "Physics", 
+            handler:props.actionProvider.handlePhysicsList, 
             id:1,
         },
-
+        {
+            text: "Chemistry", 
+            handler:props.actionProvider.handleChemistryList, 
+            id:2,
+        },  
+        {
+            text: "Mathematics", 
+            handler:props.actionProvider.handleMathematicsList, 
+            id:3,
+        },
 
         {
-            text: "Fashion Design", 
-            handler:props.actionProvider.handleFashionList, 
-            id:2,
+            text: "English", 
+            handler:props.actionProvider.handleEnglishList, 
+            id:4,
         },
+        {
+            text: "Economics", 
+            handler:props.actionProvider.handleEconomicsList, 
+            id:5,
+        },
+
     ];
 
     const optionsMarkup = options.map((option)=> (
