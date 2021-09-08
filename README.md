@@ -1,6 +1,6 @@
 # React ChatBot for XIIth CBSE students 
 ![Alt](https://raw.githubusercontent.com/aseemchopra25/external-files/main/chatbot.gif)
-> Created a weather app using openweathermap API, ReactJS, React-Hooks and Custom CSS
+> Created a chatbot using reactjs and custom CSS
 
 ## Available Scripts
 
